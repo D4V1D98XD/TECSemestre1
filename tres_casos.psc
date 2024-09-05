@@ -3,6 +3,7 @@ Algoritmo tres_casos
 	Definir  bandera como entero
 	Definir peso, estatura, est, imc como real
 	definir edad, meses, dias, biciesto, diastrunc como real
+	definir mano_obra, total, material Como Real
 	Escribir "1.- masa corporal 2.- edad meses dias 3.- Construccion y mano de obra"
 	Escribir "Elige una opcion"
 	leer bandera
@@ -35,16 +36,20 @@ Algoritmo tres_casos
 			dias = meses * 365
 			biciesto = edad / 4
 			dias = dias + biciesto
-			diastrunc = Trunc(dias;-1)
+			diastrunc = Trunc(dias)
 			Escribir "Meses de vida: ", meses
-			Escribir "dias de vida: ", dias
+			Escribir "dias de vida: ", diastrunc
 			Escribir "años biciestos: ", biciesto
 		FinSi
 		si bandera == 3 Entonces
-			
+			Escribir "Ingresa el presupuesto de la obra"
+			leer total
+			mano_obra = total * 0.40
+			material = total - mano_obra
+			Escribir "Costo materiales:", material "Costo mano de obra: ",mano_obra
 		FinSi
 	SiNo
-		Escribir "Operación invalida"
+		Escribir "Operacion invalida"
 		
 		
 	FinSi
