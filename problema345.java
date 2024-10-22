@@ -23,11 +23,19 @@ public class Main
 		num = 0;
 		System.out.println("ingresa un numero: ");
 		num = scan.nextInt();
-		//residuo = num % 10;
-		if(num % 10 < 4){
-		    System.out.println("elpepe");
-		    
-		}
+		double residuo = num % 10;
+		double elevado = 0;
+		if(residuo < 4){
+		    residuo = num / 2;
+		    System.out.println("entre");
+		    }else if(residuo >= 4 && residuo <= 7){
+		        elevado = Math.pow(residuo, 2); // cuadrado
+		        System.out.println("cuadrado");
+		    }else{
+		        elevado = residuo * 20; // 20 veces su valor
+		        System.out.println("20 veces");
+		    }
+		System.out.println("Resultado: "+ elevado);
 	}
 }
 
