@@ -5,18 +5,16 @@ obtenga el numero de decenas que contiene
 
 *******************************************************************************/
 import java.util.*;
-public class Main{
-    //problema 10
+public class problema10{
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Ingresa un numero: ");
-		int num = scan.nextInt();
-		int decenas = 0;
+		int num = 0, decenas=0;
 		do{
-		    num = num / 10;
-		    decenas++;
-		}while(!(num > 0 && num <100));
+			System.out.println("Ingresa un numero: ");
+			num = scan.nextInt();	
+		}while(!(num >= 0 && num <= 99));
+		decenas = num / 10;
 		System.out.println("Numero de decenas: "+ decenas);
-		
+
 	}
 }
