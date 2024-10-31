@@ -1,10 +1,4 @@
-/******************************************************************************
 
-                            Online Java Compiler.
-                Code, Compile, Run and Debug java program online.
-Write your code in this editor and press "Run" button to execute it.
-
-*******************************************************************************/
 import java.util.*;
 public class Main{
     //problema 9
@@ -12,38 +6,43 @@ public class Main{
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Ingresa un numero del 0 al 10");
 		int num = scan.nextInt();
+		String numero = "";
 		switch(num){
+		    case 0:
+		        numero = "cero";
+		    break;
 		    case 1:
-		        System.out.println("uno");
+		        numero = "uno";
 		    break;
 		    case 2:
-		        System.out.println("dos");
+		        numero = "dos";
 		    break;
 		    case 3:
-		        System.out.println("tres");
+		        numero = "tres";
 		    break;
 		    case 4:
-		        System.out.println("cuatro");
+		        numero = "cuatro";
 		    break;
 		    case 5:
-		        System.out.println("cinco");
+		        numero = "cinco";
 		    break;
 		    case 6:
-		        System.out.println("seis");
+		        numero = "seis";
 		    break;
 		    case 7:
-		        System.out.println("siete");
+		        numero = "siete";
 		    break;
 		    case 8:
-		        System.out.println("ocho");
+		        numero = "ocho";
 		    break;
 		    case 9:
-		        System.out.println("nueve");
+		        numero = "nueve";
 		    break;
 		    case 10:
-		        System.out.println("diez");
+		        numero = "diez";
 		    break;
 		    
 		}
+		System.out.println("El numero es "+ numero);
 	}
 }
