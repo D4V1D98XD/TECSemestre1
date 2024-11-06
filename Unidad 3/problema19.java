@@ -1,6 +1,6 @@
 
 import java.util.Scanner; //6677122489
-public class Main {
+public class problema19 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String numeros, formato = "";
