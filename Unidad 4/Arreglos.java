@@ -50,5 +50,5 @@ public class Arreglos {
 		//create boolean
 		public static boolean[] crearArregloBoolean(int tamano) {
 			return new boolean[] {true, false, true, false, true, false, true, false, true, false};
-
+		}
 }
