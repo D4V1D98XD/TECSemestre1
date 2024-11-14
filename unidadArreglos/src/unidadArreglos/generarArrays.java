@@ -15,7 +15,9 @@ public class generarArrays {
 			int[] sumArray = operacionesArreglos.sumarArrays(arr1, arr2);
 			System.out.println("Tercer Arreglos");
 			Arreglos.imprimirArregloInt(sumArray);
-			
+			int[] paroimparArray = operacionesArreglos.paroimparArray(arr1, arr2);
+			System.out.println("Par o Impar");
+			Arreglos.imprimirArregloInt(paroimparArray);
 		//todo numero menor a 100 lo haremos un 0, y mayor a 100 un 200
 		}
 	}
