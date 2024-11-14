@@ -1,4 +1,4 @@
-package unidadArreglos;
+package parte1;
 import java.util.*;
 public class Arreglos {
 	static Scanner scan = new Scanner(System.in);
