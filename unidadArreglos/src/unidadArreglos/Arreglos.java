@@ -11,6 +11,17 @@ public class Arreglos {
 		}
 		return arrInt;
 	}
+	
+	//problema6
+	public static int[] problema6() {
+		Random random = new Random();
+		int[] array = new int[12];
+		for(int i=0; i<array.length; i++) {
+			array[i] = random.nextInt((50 - 20) + 1) + 20;
+		}
+		return array;
+	}
+
 	//print int
 	public static void imprimirArregloInt(int[] arrInt) {
 		for(int i=0; i<arrInt.length; i++) {

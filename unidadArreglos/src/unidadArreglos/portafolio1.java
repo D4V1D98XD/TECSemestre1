@@ -9,6 +9,7 @@ public class portafolio1 {
 		do {
 			opcion = menu();
 			switch(opcion) {
+			
 			case 1:
 				System.out.println("Ingresa el tamaño de tu arreglo:");
 				tamano = scan.nextInt();
@@ -18,7 +19,8 @@ public class portafolio1 {
 				Arreglos.imprimirArregloInt(arreglo);
 				int triple = Ejercicios.sumaTripleArreglo(arreglo);
 				System.out.println("el triple de la suma es: " + triple);
-				break;
+			break;
+			
 			case 2:
 				System.out.println("Ingresa el tamaño de tu arreglo:");
 				tamano = scan.nextInt();
@@ -29,9 +31,12 @@ public class portafolio1 {
 				int[] impares = Ejercicios.impares(arreglo2);
 				System.out.println("Los numeros impares son: ");
 				Arreglos.imprimirArregloInt(impares);
-				break;
+			break;
+			
 			case 3:
-				break;
+		
+			break;
+			
 			case 4:
 				System.out.println("Calificaciones: ");
 				int[] cali = Arreglos.crearArregloInt(12);
@@ -40,7 +45,32 @@ public class portafolio1 {
 				
 				int promedio = Ejercicios.promedios(cali);
 				System.out.println("El promedio de calificaciones aprobatorias es: "+ promedio);
-				break;
+			break;
+			
+			case 5:
+				String cadena;
+				do {
+					System.out.println("ingresa una cadena de texto de al menos 50 caracteres:");
+					cadena = scan.nextLine();
+				}while(!(cadena.length() >= 50));
+				
+				int[] frecuencia = Ejercicios.frecuenciaVocales(cadena);
+				System.out.println("a: "+ frecuencia[0]);
+				System.out.println("e: "+ frecuencia[1]);
+				System.out.println("i: "+ frecuencia[2]);
+				System.out.println("o: "+ frecuencia[3]);
+				System.out.println("u: "+ frecuencia[4]);
+				
+			break;
+				
+			case 6:
+				System.out.println("Ingresa el digito a buscar:");
+				int buscar = scan.nextInt();
+				int[] array = Arreglos.problema6();
+				Arreglos.imprimirArregloInt(array);
+				System.out.println();
+				Ejercicios.posicionEnArreglo(buscar, array);
+			break;
 			}
 			
 		  }
