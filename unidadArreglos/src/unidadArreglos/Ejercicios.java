@@ -27,6 +27,33 @@ public class Ejercicios {
 		}
 		return impares;
 	}
+	
+	//problema 3
+	public static String[] palabraPorPosicion(String palabras) {
+		int espacios = 0;
+		for(int i=0; i<palabras.length(); i++) {
+			if(palabras.charAt(i) == ' ') {
+				espacios++;
+			}
+		}
+		int pos=0, espacioGuardado =0;
+		String[] Arreglo = new String[espacios + 1]; //para poder guardar la ultima palabra + 1
+		for(int i=0; i<palabras.length(); i++) {
+			if(palabras.charAt(i) == ' ') {
+				Arreglo[pos] = palabras.substring(espacioGuardado, i);
+				pos++;
+				espacioGuardado = i + 1;
+			}
+		}
+		for(int i=espacioGuardado - 1; i<palabras.length(); i++) {
+			if(palabras.charAt(i) == ' ') {
+				Arreglo[pos] = palabras.substring(espacioGuardado, palabras.length());
+			}
+		}
+		return Arreglo;
+	}
+	
+	
 	//problema 4
 	public static int promedios(int[] arr) {
 		int promedio = 0, alumnos = arr.length;
@@ -39,10 +66,10 @@ public class Ejercicios {
 		
 		return promedio;
 	}
-	
+	//problema 5
 	public static int[] frecuenciaVocales(String cadena) {
 		int[] frecuencia = new int[5];
-		//int a = 0,e = 1,I = 2,o = 3,u = 4;
+		//int a = 0,e = 1,I = 2,o = 3,u = 4; descartado pq es la misma si le pongo la posicion
 		for(int i=0; i<cadena.length(); i++) {
 			if(cadena.charAt(i) == 'a' || cadena.charAt(i) == 'A') {
 				frecuencia[0]++;

@@ -39,7 +39,7 @@ public class Arreglos {
 	//print String
 	public static void imprimirArregloString(String[] arrString) {
 		for(int i=0; i<arrString.length; i++) {
-			System.out.println(arrString[i] + " - ");
+			System.out.println(arrString[i]);
 		}
 	}
 	

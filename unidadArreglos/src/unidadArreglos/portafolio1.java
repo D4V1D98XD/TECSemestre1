@@ -34,7 +34,15 @@ public class portafolio1 {
 			break;
 			
 			case 3:
-		
+				String texto;
+				do {
+					System.out.println("Ingresa un texto de al menos 100 caracteres");
+					texto = scan.nextLine();
+					
+				}while(!(texto.length() >= 100));
+				System.out.println();
+				String[] palabraPosicion = Ejercicios.palabraPorPosicion(texto);
+				Arreglos.imprimirArregloString(palabraPosicion);
 			break;
 			
 			case 4:
