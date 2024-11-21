@@ -9,23 +9,53 @@ public class Metodos2 {
  	}
 	return matS;
 	}
-	//pense que era con matriz elpepe
+	//pense que era con matriz elpepe PROBLEMA 2
 	public static int[] elementosComunes(int[] mat1,int[] mat2){
 		int tamano = 0;
 		for(int i=0; i<mat1.length; i++) {
-			if(mat1[i] == mat2[i]) {
-				tamano++;
+			for(int j=0; j<mat1.length; j++) {
+				if(mat1[i] == mat2[j]) {
+					tamano++;
+				}
 			}
 		}
 		int[] comunes = new int[tamano];
 		tamano = 0;
 		for(int i=0; i<mat1.length; i++) {
-			if(mat1[i] == mat2[i]) {
-				comunes[tamano] = mat1[i];
-				tamano++;
+			for(int j=0; j<mat1.length; j++) {
+				if(mat1[i] == mat2[j]) {
+					comunes[tamano] = mat1[i];
+					tamano++;
+				}
 			}
 		}
 
 		return comunes;
+	}
+	
+	
+	
+	public static int[] valoresDiferentes(int[] arr1, int[] arr2) {
+		int tamano = 0;
+		for(int i=0; i<arr1.length; i++) {
+			for(int j=0; j<arr1.length; j++) {
+				if(arr1[i] != arr2[j]) {
+					tamano++;
+				}
+			}
+		}
+		System.out.println("tamano "+ tamano);
+		System.out.println();
+		int[] diferente = new int[tamano];
+		tamano = 0;
+		for(int i=0; i<arr1.length; i++) {
+			for(int j=0; j<arr1.length; j++) {
+				if(arr1[i] != arr2[j]) {
+					diferente[tamano] = arr2[j];
+				}
+			}
+			
+		}
+		return diferente;
 	}
 }
