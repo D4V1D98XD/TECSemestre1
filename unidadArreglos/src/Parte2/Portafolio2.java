@@ -26,7 +26,14 @@ public class Portafolio2 {
 			break;
 			
 			case 3:
-
+				int[] array1 = Matrices.crearArregloInt(filas);
+				Matrices.imprimirArregloInt(array1);
+				System.out.println();
+				int[] array2 = Matrices.crearArregloInt(filas);
+				Matrices.imprimirArregloInt(array2);
+				System.out.println();
+				int[] diferente = Metodos2.valoresDiferentes(array1, array2);
+				Matrices.imprimirArregloInt(diferente);
 			break;
 			
 			case 4:
