@@ -31,7 +31,7 @@ public class problemas {
 
 			break;
 			case 5:
-				Automovil auto = new Automovil();
+				problemas.automoviles();
 				
 			break;
 			case 6:
@@ -109,15 +109,20 @@ public class problemas {
         auto[5] = crearCarro("Honda", "Civic", "Lila", "Estandar", "Manual", 2001);
         auto[6] = crearCarro("Mazda", "CX-5", "Rojo", "SUV", "Automatica", 2012);
         auto[7] = crearCarro("Volkswagen", "Jetta", "Azul", "Estandar", "Automatica", 2025);
-
-		for(int i=0; i<8; i++) {
+        System.out.println("Vehiculos");
+        for(int i=0; i<auto.length; i++) {
+        	System.out.println(auto[i]);
+        }
+        
+		for(int i=0; i<auto.length; i++) {
 			if(auto[i].modelo.contains("a")){
 				auto[i].modelo = "Deluxe";
 			}
 		}
-		for(int i=0; i<8; i++) {
+		System.out.println("Carro modificado");
+		for(int i=0; i<auto.length; i++) {
             if (auto[i].modelo.equals("Deluxe")) {
-                System.out.println(auto);
+                System.out.println(auto[i]);
             }
         }
 	}
