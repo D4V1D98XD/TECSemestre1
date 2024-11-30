@@ -35,7 +35,7 @@ public class problemas {
 				
 			break;
 			case 6:
-				
+				problemas.libros();
 			break;
 			}
 			
@@ -136,6 +136,42 @@ public class problemas {
 		auto.transmision = transmision;
 		auto.anoEdicion = anoEdicion;
 		return auto;
+	}
+	
+	public static void libros() {
+		libro[] libro = new libro[10];
+		libro[0] = crearLibro("Mundo Wigetta", "Vegetta777", "CD Project Red", "Deluxe",  2020);
+		libro[1] = crearLibro("Call of Duty", "Activision", "Treyarch", "Estandar+",  2010);
+		libro[2] = crearLibro("Cyberpunk2077", "David Martinez", "CD Project Red", "Deluxe",  2019);
+		libro[3] = crearLibro("Halo", "Jefe Maestro", "343", "Estandar",  2012);
+		libro[4] = crearLibro("Angry Birds", "Ibai", "Warner Bros", "Estandar",  2023);
+		libro[5] = crearLibro("Mundo Wigetta 2", "SledgeHammer Games", "Activision", "Premium",  2022);
+		libro[6] = crearLibro("Cryptomonedas y su relacion con Nintendo", "Willyrex", "Nintendo", "Deluxe",  2015);
+		libro[7] = crearLibro("Biografia Bruce Wayne", "Batman", "Pesqueria Inc", "Premium",  2019);
+		libro[8] = crearLibro("Biografia de batman", "Bruce Wayne", "Wayne Industries", "Estandar",  2018);
+		libro[9] = crearLibro("Guia de pesca", "Rexona", "Microsoft", "Online Version",  2017);
+
+        System.out.println("Vehiculos");
+        for(int i=0; i<libro.length; i++) {
+        	System.out.println(libro[i]);
+        }
+        
+		System.out.println("libros publicados hace mas de 5 anos");
+		for(int i=0; i<libro.length; i++) {
+            if (libro[i].anoPublicacion < 2019) {
+                System.out.println(libro[i]);
+            }
+        }
+	}
+	
+	public static libro crearLibro(String titulo, String autor, String editorial, String edicion, int anoPublicacion) {
+		libro libro = new libro();
+		libro.autor = autor;
+		libro.titulo = titulo;
+		libro.editorial = editorial;
+		libro.edicion = edicion;
+		libro.anoPublicacion = anoPublicacion;
+		return libro;
 	}
 
 }
